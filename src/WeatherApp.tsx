@@ -1,9 +1,9 @@
-import { Search, Time } from "./header/";
-import { DownMain, TopMain } from "./contenMain";
+import { Search, Time } from "./components/header";
+import { DownMain, TopMain } from "./components/contenMain";
 import { useGetApi } from "./hooks/useGetApi";
 
 export const WeatherApp = () => {
-  const { doc, isLoading } = useGetApi();
+  const { doc, isLoading } = useGetApi("Cuba");
 
   return (
     <>
