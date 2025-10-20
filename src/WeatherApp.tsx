@@ -1,21 +1,27 @@
 import { Search, Time } from "./header/";
 import { DownMain, TopMain } from "./contenMain";
-import { getFetch } from "./helpers/getFetch";
-
-getFetch("Cuba");
+import { useGetApi } from "./hooks/useGetApi";
 
 export const WeatherApp = () => {
+  const { doc, isLoading } = useGetApi();
+
   return (
     <>
       <header>
-        <Time></Time>
         <Search></Search>
+        <Time></Time>
       </header>
 
-      <main>
-        <TopMain></TopMain>
-        <DownMain></DownMain>
-      </main>
+      {isLoading ? (
+        <h2>Cargando...</h2>
+      ) : !doc ? (
+        <h2>Región desconocida, ingrese otra</h2>
+      ) : (
+        <main>
+          <TopMain></TopMain>
+          <DownMain></DownMain>
+        </main>
+      )}
     </>
   );
 };
