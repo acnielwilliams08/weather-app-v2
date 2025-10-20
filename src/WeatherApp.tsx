@@ -15,7 +15,6 @@ export const WeatherApp = () => {
     <>
       <header>
         <Search onInputSubmit={onInputSubmit}></Search>
-        <Time></Time>
       </header>
 
       {isLoading ? (
@@ -24,6 +23,7 @@ export const WeatherApp = () => {
         <h2>Región desconocida, ingrese otra</h2>
       ) : (
         <main>
+          <Time {...doc.location}></Time>
           <TopMain></TopMain>
           <DownMain></DownMain>
         </main>
