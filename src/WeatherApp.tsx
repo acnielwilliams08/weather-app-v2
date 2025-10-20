@@ -24,7 +24,7 @@ export const WeatherApp = () => {
       ) : (
         <main>
           <Time {...doc.location}></Time>
-          <TopMain></TopMain>
+          <TopMain {...doc}></TopMain>
           <DownMain></DownMain>
         </main>
       )}
