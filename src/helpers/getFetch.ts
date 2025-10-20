@@ -12,6 +12,6 @@ export const getFetch = async (region: string = "Cuba") => {
     return data;
   } catch (error) {
     console.error(error);
-    return error;
+    return null;
   }
 };

@@ -28,12 +28,18 @@ export const useGetApi = (region: string = "Cuba") => {
 
   const getDoc = async () => {
     const data = await getFetch(region);
+
+    if (!data) {
+      setDoc(undefined);
+      return;
+    }
+
     setDoc({ ...data });
   };
 
   useEffect(() => {
     getDoc().finally(() => setIsLoading(false));
-  }, []);
+  }, [region]);
 
   return { doc, isLoading };
 };

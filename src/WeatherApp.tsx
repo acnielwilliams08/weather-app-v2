@@ -1,14 +1,20 @@
 import { Search, Time } from "./components/header";
 import { DownMain, TopMain } from "./components/contenMain";
 import { useGetApi } from "./hooks/useGetApi";
+import { useState } from "react";
 
 export const WeatherApp = () => {
-  const { doc, isLoading } = useGetApi("Cuba");
+  const [region, setRegion] = useState("Cuba");
+  const { doc, isLoading } = useGetApi(region);
+
+  const onInputSubmit = (value: string) => {
+    setRegion(value);
+  };
 
   return (
     <>
       <header>
-        <Search></Search>
+        <Search onInputSubmit={onInputSubmit}></Search>
         <Time></Time>
       </header>
 
