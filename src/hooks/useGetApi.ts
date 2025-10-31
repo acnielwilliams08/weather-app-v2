@@ -4,7 +4,8 @@ import { getFetch } from "../helpers/getFetch";
 export interface ApiProps {
   current: {
     condition: {
-      text: string;
+      text: string,
+      code: string
     };
     temp_c: string;
     humidity: string;

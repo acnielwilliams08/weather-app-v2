@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   color: rgb(41, 41, 41);
+  margin-bottom: 3rem;
 }
 
 .degree {
