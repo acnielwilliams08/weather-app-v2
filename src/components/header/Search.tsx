@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import searchIcon from "../../assets/travel_explore_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png";
+import '../../styles/components/header/Search.css'
 
 interface SearchProps {
   onInputSubmit: (value: string) => void;

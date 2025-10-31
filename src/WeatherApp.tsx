@@ -2,6 +2,7 @@ import { Search, Time } from "./components/header";
 import { DownMain, TopMain } from "./components/contenMain";
 import { useGetApi } from "./hooks/useGetApi";
 import { useState } from "react";
+import './styles/WeatherApp.css'
 
 export const WeatherApp = () => {
   const [region, setRegion] = useState("Cuba");

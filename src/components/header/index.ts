@@ -1,2 +1,2 @@
 export * from "./Search";
-export * from "./Time";
+export * from "../contenMain/Time";

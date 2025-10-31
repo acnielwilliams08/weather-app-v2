@@ -1,0 +1,31 @@
+.input_container {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+  justify-self: center;
+}
+
+.input {
+  width: 15rem;
+  height: 2.2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  &:focus-visible {
+    outline: 0;
+  }
+}
+
+.input_button {
+  width: 2.2rem;
+  background-color: rgb(58, 58, 58);
+  transition: 0.5s ease-in;
+
+  &:hover {
+    background-color: rgb(26, 26, 26);
+  }
+}
