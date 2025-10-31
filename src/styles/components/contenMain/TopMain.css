@@ -1,0 +1,11 @@
+.top_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(41, 41, 41);
+}
+
+.degree {
+  font-size: 5rem;
+  color: rgb(41, 41, 41);
+}
